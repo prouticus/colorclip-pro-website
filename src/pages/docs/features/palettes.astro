@@ -1,0 +1,170 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout
+  title="Palettes - ColorClip Pro Documentation"
+  description="Learn how to manage and organize color palettes in ColorClip Pro"
+>
+  <h1>Palettes</h1>
+
+  <p>
+    Palettes are the core organizational unit in ColorClip Pro. Each palette can hold
+    up to 256 color swatches, organized in a customizable grid.
+  </p>
+
+  <h2>Creating Palettes</h2>
+
+  <p>To create a new palette:</p>
+
+  <ol>
+    <li>Click the <strong>+ New Palette</strong> button</li>
+    <li>Or press <code>Cmd+N</code> (Mac) / <code>Ctrl+N</code> (Windows)</li>
+    <li>Give your palette a descriptive name</li>
+    <li>Start adding swatches!</li>
+  </ol>
+
+  <h2>Palette Grid</h2>
+
+  <p>
+    The palette grid displays all your swatches in a visual layout. Empty slots are
+    shown as outlined squares, while filled swatches display their color.
+  </p>
+
+  <pre class="ascii-art">
+┌──────────────────────────────────┐
+│ Brand Colors (12 swatches)       │
+├──────────────────────────────────┤
+│ ■ ■ ■ ■ □ □ □ □ □ □             │
+│ ■ ■ ■ ■ ■ ■ ■ ■ □ □             │
+│                                  │
+│ ■ = Filled swatch                │
+│ □ = Empty slot                   │
+└──────────────────────────────────┘
+  </pre>
+
+  <h2>Managing Swatches</h2>
+
+  <h3>Adding Swatches</h3>
+  <ul>
+    <li><strong>Click empty slot</strong> - Opens color picker</li>
+    <li><strong>Eyedropper</strong> - Adds to first empty slot</li>
+    <li><strong>Paste HEX</strong> - Paste color code into slot</li>
+  </ul>
+
+  <h3>Editing Swatches</h3>
+  <ul>
+    <li><strong>Click swatch</strong> - Copy color value</li>
+    <li><strong>Double-click</strong> - Edit color</li>
+    <li><strong>Right-click</strong> - Show context menu</li>
+  </ul>
+
+  <h3>Swatch Labels</h3>
+  <p>
+    Each swatch can have a custom label to help you remember its purpose:
+  </p>
+
+  <ol>
+    <li>Right-click on a swatch</li>
+    <li>Select <strong>Edit Label</strong></li>
+    <li>Enter a name like "Primary Button" or "Text Color"</li>
+    <li>Labels appear when you hover over the swatch</li>
+  </ol>
+
+  <h3>Color History</h3>
+  <p>
+    ColorClip Pro tracks the history of each swatch, recording every change:
+  </p>
+
+  <ol>
+    <li>Right-click on a swatch</li>
+    <li>Select <strong>View History</strong></li>
+    <li>See all previous colors and when they changed</li>
+    <li>Click any historical color to restore it</li>
+  </ol>
+
+  <h2>Organizing Swatches</h2>
+
+  <h3>Drag and Drop</h3>
+  <p>
+    Rearrange swatches by dragging them to different positions in the grid.
+    Your layout is automatically saved.
+  </p>
+
+  <h3>Grid Positions</h3>
+  <p>
+    The grid maintains positional integrity - empty slots are preserved so your
+    visual layout stays consistent. This is important for:
+  </p>
+
+  <ul>
+    <li>Grouping related colors together</li>
+    <li>Creating visual hierarchies</li>
+    <li>Maintaining consistent spacing</li>
+  </ul>
+
+  <h2>Palette Settings</h2>
+
+  <h3>Rename Palette</h3>
+  <ol>
+    <li>Click the palette name at the top</li>
+    <li>Type a new name</li>
+    <li>Press Enter to save</li>
+  </ol>
+
+  <h3>Delete Palette</h3>
+  <ol>
+    <li>Open the palette menu (⋮)</li>
+    <li>Select <strong>Delete Palette</strong></li>
+    <li>Confirm deletion</li>
+  </ol>
+
+  <blockquote>
+    <strong>Warning:</strong> Deleting a palette is permanent and cannot be undone,
+    even with cloud sync enabled.
+  </blockquote>
+
+  <h2>Multiple Palettes</h2>
+
+  <p>
+    You can create unlimited palettes to organize colors by project, client, or purpose:
+  </p>
+
+  <ul>
+    <li><strong>Project-based</strong> - One palette per project</li>
+    <li><strong>Category-based</strong> - Brand colors, UI colors, Print colors</li>
+    <li><strong>Client-based</strong> - One palette per client</li>
+    <li><strong>Purpose-based</strong> - Favorites, Inspiration, In Progress</li>
+  </ul>
+
+  <h3>Switching Palettes</h3>
+  <p>
+    Use the palette dropdown at the top of the window to switch between your palettes.
+    The currently active palette is used when you capture colors with the eyedropper.
+  </p>
+
+  <h2>Best Practices</h2>
+
+  <h3>Naming Conventions</h3>
+  <ul>
+    <li>Use descriptive names: "Acme Corp Brand" instead of "Palette 1"</li>
+    <li>Include version numbers for iterations: "Website v2"</li>
+    <li>Add dates for time-based projects: "Holiday Campaign 2025"</li>
+  </ul>
+
+  <h3>Organization Tips</h3>
+  <ul>
+    <li>Group similar colors together (all blues, all reds, etc.)</li>
+    <li>Put your most-used colors in the top-left corner for easy access</li>
+    <li>Use labels for colors that aren't obviously named</li>
+    <li>Keep palettes focused - create separate palettes instead of one huge palette</li>
+  </ul>
+
+  <h2>See Also</h2>
+
+  <ul>
+    <li><a href="/docs/features/cloud-sync">Cloud Sync</a> - Sync palettes across devices</li>
+    <li><a href="/docs/guides/export-import">Export & Import</a> - Share palettes with others</li>
+    <li><a href="/docs/guides/workflows">Color Workflows</a> - Common palette workflows</li>
+  </ul>
+</DocsLayout>

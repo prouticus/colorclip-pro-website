@@ -1,0 +1,173 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout
+  title="Quick Start - ColorClip Pro Documentation"
+  description="Get started with ColorClip Pro in minutes"
+>
+  <h1>Quick Start Guide</h1>
+
+  <p>
+    This guide will walk you through the basics of using ColorClip Pro in just a few minutes.
+  </p>
+
+  <h2>Step 1: Create Your First Palette</h2>
+
+  <p>
+    When you first launch ColorClip Pro, you'll see an empty palette grid. Each palette
+    can hold up to 256 color swatches.
+  </p>
+
+  <pre class="ascii-art">
+┌─────────────────────────────────┐
+│ My First Palette                │
+├─────────────────────────────────┤
+│ □ □ □ □ □ □ □ □ □ □            │
+│ □ □ □ □ □ □ □ □ □ □            │
+│ (empty swatches)                │
+└─────────────────────────────────┘
+  </pre>
+
+  <h2>Step 2: Add a Color</h2>
+
+  <p>There are three ways to add a color to your palette:</p>
+
+  <h3>Method 1: Color Picker</h3>
+  <ol>
+    <li>Click an empty swatch slot</li>
+    <li>Use the color wheel or sliders to select a color</li>
+    <li>Adjust the alpha channel if needed</li>
+    <li>The color is automatically saved to that slot</li>
+  </ol>
+
+  <h3>Method 2: Eyedropper</h3>
+  <ol>
+    <li>Click the eyedropper button or press <code>Cmd+E</code> (Mac) / <code>Ctrl+E</code> (Windows)</li>
+    <li>Your screen will dim and show a magnified preview</li>
+    <li>Click anywhere on your screen to capture that color</li>
+    <li>The color is added to the first empty swatch slot</li>
+  </ol>
+
+  <h3>Method 3: Paste HEX Code</h3>
+  <ol>
+    <li>Copy a HEX color code (e.g., <code>#FF5733</code>)</li>
+    <li>Click an empty swatch</li>
+    <li>Paste the code directly into the color input</li>
+  </ol>
+
+  <h2>Step 3: Organize Your Colors</h2>
+
+  <h3>Label Swatches</h3>
+  <p>
+    Right-click on any swatch and select "Edit Label" to give it a meaningful name
+    like "Brand Primary" or "Accent Blue".
+  </p>
+
+  <h3>Rearrange Swatches</h3>
+  <p>
+    Drag and drop swatches to reorder them. Your layout is preserved automatically.
+  </p>
+
+  <h3>Delete Swatches</h3>
+  <p>
+    Right-click a swatch and select "Delete" or press <code>Delete</code> when a swatch is selected.
+  </p>
+
+  <h2>Step 4: Copy Colors</h2>
+
+  <p>
+    Click on any swatch to copy its color value. The format depends on your settings:
+  </p>
+
+  <ul>
+    <li><strong>HEX</strong> - <code>#FF5733</code></li>
+    <li><strong>RGB</strong> - <code>rgb(255, 87, 51)</code></li>
+    <li><strong>HSV</strong> - <code>hsv(11, 80%, 100%)</code></li>
+    <li><strong>Normalized RGB</strong> - <code>1.0, 0.34, 0.2</code></li>
+  </ul>
+
+  <p>
+    Change the copy format in Settings → Copy Format.
+  </p>
+
+  <h2>Step 5: Enable Cloud Sync (Optional)</h2>
+
+  <p>
+    To sync your palettes across devices:
+  </p>
+
+  <ol>
+    <li>Click the cloud icon in the top-right corner</li>
+    <li>Sign in with Google, GitHub, or Discord</li>
+    <li>Your palettes will sync automatically</li>
+    <li>Install ColorClip Pro on other devices and sign in with the same account</li>
+  </ol>
+
+  <blockquote>
+    <strong>Tip:</strong> Cloud sync works in real-time. Changes you make on one device
+    appear instantly on all your other devices!
+  </blockquote>
+
+  <h2>Common Workflows</h2>
+
+  <h3>Building a Brand Color Palette</h3>
+  <ol>
+    <li>Create a new palette named "Brand Colors"</li>
+    <li>Add your primary brand color</li>
+    <li>Add secondary, accent, and neutral colors</li>
+    <li>Label each swatch (e.g., "Primary", "Accent", "Text")</li>
+    <li>Use the eyedropper to match colors from your logo or website</li>
+  </ol>
+
+  <h3>Extracting Colors from a Design</h3>
+  <ol>
+    <li>Open your design file in any application</li>
+    <li>Press <code>Cmd+E</code> / <code>Ctrl+E</code> to activate the eyedropper</li>
+    <li>Click colors in your design to capture them</li>
+    <li>ColorClip Pro runs in the background while you work</li>
+    <li>All captured colors are saved to your active palette</li>
+  </ol>
+
+  <h2>Keyboard Shortcuts</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>macOS</th>
+        <th>Windows</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Eyedropper</td>
+        <td><code>Cmd+E</code></td>
+        <td><code>Ctrl+E</code></td>
+      </tr>
+      <tr>
+        <td>New Palette</td>
+        <td><code>Cmd+N</code></td>
+        <td><code>Ctrl+N</code></td>
+      </tr>
+      <tr>
+        <td>Settings</td>
+        <td><code>Cmd+,</code></td>
+        <td><code>Ctrl+,</code></td>
+      </tr>
+      <tr>
+        <td>Delete Swatch</td>
+        <td><code>Delete</code></td>
+        <td><code>Delete</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Next Steps</h2>
+
+  <ul>
+    <li>Explore <a href="/docs/features/palettes">advanced palette features</a></li>
+    <li>Learn about <a href="/docs/features/cloud-sync">cloud sync</a></li>
+    <li>Check out <a href="/docs/guides/workflows">color workflow guides</a></li>
+  </ul>
+</DocsLayout>

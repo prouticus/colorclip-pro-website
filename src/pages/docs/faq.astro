@@ -1,0 +1,191 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout
+  title="FAQ - ColorClip Pro Documentation"
+  description="Frequently asked questions about ColorClip Pro"
+>
+  <h1>Frequently Asked Questions</h1>
+
+  <h2>General</h2>
+
+  <h3>Is ColorClip Pro free?</h3>
+  <p>
+    Yes! ColorClip Pro is completely free and open source. There are no premium
+    features, subscriptions, or in-app purchases.
+  </p>
+
+  <h3>What platforms does ColorClip Pro support?</h3>
+  <p>
+    ColorClip Pro is available for:
+  </p>
+  <ul>
+    <li><strong>macOS</strong> - macOS 10.15 (Catalina) or later (Intel and Apple Silicon)</li>
+    <li><strong>Windows</strong> - Windows 10 or later (64-bit)</li>
+    <li><strong>Mobile</strong> - Coming soon for iOS and Android (join the <a href="/#mobile-waitlist">waitlist</a>)</li>
+  </ul>
+
+  <h3>Is my color data private?</h3>
+  <p>
+    Yes! Your palette data is stored locally on your device by default. If you enable
+    cloud sync, your data is encrypted in transit and stored securely. We never share
+    your color data with third parties.
+  </p>
+
+  <h2>Features</h2>
+
+  <h3>How many swatches can I have in a palette?</h3>
+  <p>
+    Each palette can hold up to 256 swatches. You can create unlimited palettes.
+  </p>
+
+  <h3>What color formats are supported?</h3>
+  <p>
+    ColorClip Pro supports:
+  </p>
+  <ul>
+    <li><strong>HEX</strong> - 8-digit (#RRGGBBAA) and 6-digit (#RRGGBB)</li>
+    <li><strong>RGB</strong> - 0-255 range with alpha</li>
+    <li><strong>HSV</strong> - Hue (0-360), Saturation/Value (0-100)</li>
+    <li><strong>Normalized RGB</strong> - 0.0-1.0 range (for graphics programming)</li>
+  </ul>
+
+  <h3>Does the eyedropper work with all applications?</h3>
+  <p>
+    Yes! The eyedropper captures colors from anywhere on your screen, including:
+  </p>
+  <ul>
+    <li>Design tools (Figma, Sketch, Adobe XD, Photoshop, etc.)</li>
+    <li>Web browsers</li>
+    <li>Other applications</li>
+    <li>Your desktop wallpaper</li>
+  </ul>
+
+  <h3>Can I use ColorClip Pro offline?</h3>
+  <p>
+    Absolutely! ColorClip Pro works completely offline. Cloud sync is optional - you
+    can use the app without ever signing in.
+  </p>
+
+  <h2>Cloud Sync</h2>
+
+  <h3>How does cloud sync work?</h3>
+  <p>
+    When enabled, ColorClip Pro syncs your palettes to our secure cloud servers in
+    real-time. Changes you make on one device appear instantly on all your other devices.
+  </p>
+
+  <h3>What if I make changes on two devices at the same time?</h3>
+  <p>
+    ColorClip Pro uses smart conflict resolution. If the same swatch is changed on two
+    devices simultaneously, the most recent change wins. Color history tracks all
+    changes, so you can always recover previous versions.
+  </p>
+
+  <h3>Can I sync palettes with my team?</h3>
+  <p>
+    Currently, palettes are private to your account. Team collaboration features are
+    planned for a future release. In the meantime, you can use the export/import
+    feature to share palettes.
+  </p>
+
+  <h3>Which authentication providers are supported?</h3>
+  <p>
+    You can sign in with:
+  </p>
+  <ul>
+    <li>Google</li>
+    <li>GitHub</li>
+    <li>Discord</li>
+  </ul>
+
+  <h2>Troubleshooting</h2>
+
+  <h3>The eyedropper isn't working on macOS</h3>
+  <p>
+    ColorClip Pro needs screen recording permission to capture colors:
+  </p>
+  <ol>
+    <li>Open <strong>System Settings → Privacy & Security → Screen Recording</strong></li>
+    <li>Enable ColorClip Pro in the list</li>
+    <li>Restart ColorClip Pro</li>
+  </ol>
+
+  <h3>My palettes aren't syncing</h3>
+  <p>
+    Check these common issues:
+  </p>
+  <ul>
+    <li>Make sure you're signed in with the same account on all devices</li>
+    <li>Check your internet connection</li>
+    <li>Look for the cloud sync icon - if it shows an error, click it for details</li>
+    <li>Try signing out and back in</li>
+  </ul>
+
+  <h3>ColorClip Pro won't launch on macOS</h3>
+  <p>
+    See the <a href="/docs/installation#first-launch-macos-security">macOS security section</a>
+    in the installation guide. You may need to right-click and select "Open" the first time.
+  </p>
+
+  <h3>Where is my palette data stored?</h3>
+  <p>
+    Local palette data is stored at:
+  </p>
+  <ul>
+    <li><strong>macOS:</strong> <code>~/Library/Application Support/colorclip-pro</code></li>
+    <li><strong>Windows:</strong> <code>%APPDATA%/colorclip-pro</code></li>
+  </ul>
+
+  <h2>Updates & Support</h2>
+
+  <h3>How do I update ColorClip Pro?</h3>
+  <p>
+    Download the latest version from the <a href="/">homepage</a> and replace your
+    existing installation. Your palettes and settings will be preserved.
+  </p>
+  <p>
+    <em>Automatic updates are planned for a future release.</em>
+  </p>
+
+  <h3>How do I report a bug?</h3>
+  <p>
+    Please report bugs on GitHub:
+    <a href="https://github.com/prouticus/colorclip-pro/issues" target="_blank" rel="noopener">
+      github.com/prouticus/colorclip-pro/issues
+    </a>
+  </p>
+
+  <h3>How can I request a feature?</h3>
+  <p>
+    Feature requests are welcome! Please:
+  </p>
+  <ul>
+    <li>Check if it's already requested on <a href="https://github.com/prouticus/colorclip-pro/issues" target="_blank" rel="noopener">GitHub Issues</a></li>
+    <li>If not, create a new issue with the "enhancement" label</li>
+    <li>Or discuss it in our Discord community (coming soon)</li>
+  </ul>
+
+  <h3>Can I contribute to ColorClip Pro?</h3>
+  <p>
+    Yes! ColorClip Pro is open source. Contributions are welcome:
+  </p>
+  <ul>
+    <li><strong>Code:</strong> Submit pull requests on GitHub</li>
+    <li><strong>Translations:</strong> Help translate the app to more languages</li>
+    <li><strong>Documentation:</strong> Improve these docs</li>
+    <li><strong>Bug reports:</strong> Help us find and fix issues</li>
+  </ul>
+
+  <h2>Still have questions?</h2>
+
+  <p>
+    If your question isn't answered here:
+  </p>
+  <ul>
+    <li>Check the <a href="/docs">documentation</a></li>
+    <li>Join our Discord community (coming soon)</li>
+    <li>Open an issue on <a href="https://github.com/prouticus/colorclip-pro/issues" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</DocsLayout>
