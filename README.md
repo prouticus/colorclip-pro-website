@@ -54,16 +54,87 @@ bun run preview
 
 ## Environment Variables
 
-Required for production:
+Copy `.env.example` to `.env.local` for local development.
 
-```env
-GITHUB_TOKEN=          # GitHub API access for releases
-API_INTERNAL_KEY=      # Auth for api.mantisarts.com
-DISCORD_SERVER_ID=     # For Discord widget stats
-```
+Required environment variables:
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `GITHUB_TOKEN` | GitHub API token for fetching releases | Yes |
+| `API_BASE_URL` | Main API base URL (default: https://api.mantisarts.com) | No |
+| `API_INTERNAL_KEY` | Authentication for main API | Yes (for waitlist) |
+| `DISCORD_SERVER_ID` | Discord server ID for widget | No |
+
+### Getting Environment Variables
+
+**GITHUB_TOKEN:**
+1. Go to https://github.com/settings/tokens
+2. Generate new token (classic)
+3. Select `public_repo` scope
+4. Copy the token
+
+**API_INTERNAL_KEY:**
+- Get from your api.mantisarts.com configuration
 
 ## Deployment
 
-Deployed to Vercel at \`colorclip.mantisarts.com\`
+### Deploy to Vercel (Recommended)
 
-Auto-deploys on push to \`main\` branch.
+**One-Click Deploy:**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/prouticus/colorclip-pro-website)
+
+**Manual Deployment:**
+
+1. **Connect to Vercel:**
+   ```bash
+   # Install Vercel CLI
+   npm i -g vercel
+
+   # Login to Vercel
+   vercel login
+
+   # Link project
+   vercel link
+   ```
+
+2. **Set Environment Variables:**
+   ```bash
+   vercel env add GITHUB_TOKEN
+   vercel env add API_INTERNAL_KEY
+   ```
+
+   Or add them in the Vercel dashboard:
+   - Go to Project Settings → Environment Variables
+   - Add each variable for Production, Preview, and Development
+
+3. **Deploy:**
+   ```bash
+   # Deploy to preview
+   vercel
+
+   # Deploy to production
+   vercel --prod
+   ```
+
+4. **Configure Custom Domain:**
+   - Go to Project Settings → Domains
+   - Add `colorclip.mantisarts.com`
+   - Update your DNS with the provided CNAME record
+
+**Automatic Deployments:**
+
+Once connected to GitHub, Vercel will automatically:
+- Deploy `main` branch to production
+- Deploy pull requests to preview URLs
+- Run builds on every push
+
+### Alternative: Deploy to Other Platforms
+
+The site can be deployed to any static hosting platform that supports:
+- Node.js build process
+- Serverless functions (for `/api` routes)
+
+Examples: Netlify, Cloudflare Pages, AWS Amplify
+
+**Note:** You'll need to adapt the serverless functions to your platform's format.
