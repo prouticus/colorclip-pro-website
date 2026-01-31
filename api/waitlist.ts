@@ -69,31 +69,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // Forward to main API
-    const apiUrl = process.env.API_BASE_URL || 'https://api.mantisarts.com';
-    const response = await fetch(`${apiUrl}/api/waitlist`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // Internal API key for authentication
-        'Authorization': `Bearer ${process.env.API_INTERNAL_KEY}`,
-      },
-      body: JSON.stringify({ email, source }),
-    });
+    // TODO: Forward to main API once waitlist endpoint is created
+    // For now, just log the email submission
+    console.log(`[WAITLIST] New signup: ${email} (source: ${source})`);
 
-    if (!response.ok) {
-      // Handle duplicate email (409) as success
-      if (response.status === 409) {
-        return res.status(200).json({
-          success: true,
-          message: 'You are already on the waitlist!',
-        });
-      }
-
-      const error = await response.json();
-      throw new Error(error.message || 'Failed to add to waitlist');
-    }
-
+    // Temporary: Return success without forwarding to API
+    // You can view these emails in Vercel function logs
     return res.status(201).json({
       success: true,
       message: "You're on the list! We'll notify you when ColorClip Mobile launches.",
