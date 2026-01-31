@@ -1,0 +1,308 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="docs-container">
+    <!-- Sidebar Navigation -->
+    <aside class="docs-sidebar">
+      <nav>
+        <div class="sidebar-section">
+          <h3>Getting Started</h3>
+          <ul>
+            <li class={currentPath === '/docs' ? 'active' : ''}>
+              <a href="/docs">Documentation Home</a>
+            </li>
+            <li class={currentPath === '/docs/installation' ? 'active' : ''}>
+              <a href="/docs/installation">Installation</a>
+            </li>
+            <li class={currentPath === '/docs/getting-started' ? 'active' : ''}>
+              <a href="/docs/getting-started">Quick Start</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Features</h3>
+          <ul>
+            <li class={currentPath === '/docs/features/palettes' ? 'active' : ''}>
+              <a href="/docs/features/palettes">Palettes</a>
+            </li>
+            <li class={currentPath === '/docs/features/color-picker' ? 'active' : ''}>
+              <a href="/docs/features/color-picker">Color Picker</a>
+            </li>
+            <li class={currentPath === '/docs/features/eyedropper' ? 'active' : ''}>
+              <a href="/docs/features/eyedropper">Eyedropper</a>
+            </li>
+            <li class={currentPath === '/docs/features/cloud-sync' ? 'active' : ''}>
+              <a href="/docs/features/cloud-sync">Cloud Sync</a>
+            </li>
+            <li class={currentPath === '/docs/features/keyboard-shortcuts' ? 'active' : ''}>
+              <a href="/docs/features/keyboard-shortcuts">Keyboard Shortcuts</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Guides</h3>
+          <ul>
+            <li class={currentPath === '/docs/guides/workflows' ? 'active' : ''}>
+              <a href="/docs/guides/workflows">Color Workflows</a>
+            </li>
+            <li class={currentPath === '/docs/guides/export-import' ? 'active' : ''}>
+              <a href="/docs/guides/export-import">Export & Import</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Support</h3>
+          <ul>
+            <li class={currentPath === '/docs/faq' ? 'active' : ''}>
+              <a href="/docs/faq">FAQ</a>
+            </li>
+            <li class={currentPath === '/docs/troubleshooting' ? 'active' : ''}>
+              <a href="/docs/troubleshooting">Troubleshooting</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Back to Home -->
+      <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--phosphor-dim);">
+        <a href="/" class="terminal-button" style="width: 100%; text-align: center; display: block; text-decoration: none;">
+          ← Home
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="docs-content">
+      <article>
+        <slot />
+      </article>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .docs-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--space-2xl);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .docs-sidebar {
+    position: sticky;
+    top: var(--space-lg);
+    height: fit-content;
+    max-height: calc(100vh - var(--space-2xl));
+    overflow-y: auto;
+    padding: var(--space-lg);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--phosphor-dim);
+    border-radius: 4px;
+  }
+
+  .sidebar-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .sidebar-section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .sidebar-section h3 {
+    color: var(--phosphor-green);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .sidebar-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-section li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .sidebar-section a {
+    display: block;
+    padding: var(--space-xs) var(--space-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all var(--anim-fast);
+    font-size: var(--font-size-sm);
+  }
+
+  .sidebar-section a:hover {
+    color: var(--phosphor-green);
+    border-left-color: var(--phosphor-green);
+    background: rgba(51, 255, 51, 0.05);
+  }
+
+  .sidebar-section li.active a {
+    color: var(--phosphor-green);
+    border-left-color: var(--phosphor-green);
+    background: rgba(51, 255, 51, 0.1);
+  }
+
+  .docs-content {
+    min-width: 0;
+  }
+
+  .docs-content article {
+    max-width: 800px;
+  }
+
+  /* Style documentation content */
+  .docs-content :global(h1) {
+    color: var(--phosphor-green);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-lg);
+    text-shadow: 0 0 10px var(--phosphor-glow);
+  }
+
+  .docs-content :global(h2) {
+    color: var(--phosphor-green);
+    font-size: var(--font-size-xl);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid var(--phosphor-dim);
+    padding-bottom: var(--space-sm);
+  }
+
+  .docs-content :global(h3) {
+    color: var(--text-primary);
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .docs-content :global(p) {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content :global(ul),
+  .docs-content :global(ol) {
+    color: var(--text-secondary);
+    margin-left: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content :global(li) {
+    margin-bottom: var(--space-xs);
+    line-height: 1.6;
+  }
+
+  .docs-content :global(code) {
+    background: rgba(51, 255, 51, 0.1);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 2px;
+    color: var(--phosphor-green);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  .docs-content :global(pre) {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--phosphor-dim);
+    padding: var(--space-md);
+    overflow-x: auto;
+    border-radius: 4px;
+    margin: var(--space-md) 0;
+  }
+
+  .docs-content :global(pre code) {
+    background: none;
+    padding: 0;
+  }
+
+  .docs-content :global(blockquote) {
+    border-left: 3px solid var(--phosphor-green);
+    padding-left: var(--space-md);
+    margin: var(--space-md) 0;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .docs-content :global(a) {
+    color: var(--phosphor-green);
+    text-decoration: underline;
+  }
+
+  .docs-content :global(a:hover) {
+    text-shadow: 0 0 5px var(--phosphor-glow);
+  }
+
+  .docs-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+  }
+
+  .docs-content :global(th),
+  .docs-content :global(td) {
+    border: 1px solid var(--phosphor-dim);
+    padding: var(--space-sm);
+    text-align: left;
+  }
+
+  .docs-content :global(th) {
+    background: rgba(51, 255, 51, 0.1);
+    color: var(--phosphor-green);
+    font-weight: bold;
+  }
+
+  .docs-content :global(td) {
+    color: var(--text-secondary);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 1024px) {
+    .docs-container {
+      grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar {
+      position: static;
+      max-height: none;
+    }
+  }
+
+  /* Custom scrollbar for sidebar */
+  .docs-sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .docs-sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .docs-sidebar::-webkit-scrollbar-thumb {
+    background: var(--phosphor-dim);
+    border-radius: 4px;
+  }
+
+  .docs-sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--phosphor-green);
+  }
+</style>

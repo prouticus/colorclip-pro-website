@@ -1,0 +1,135 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout
+  title="Installation - ColorClip Pro Documentation"
+  description="How to install ColorClip Pro on macOS and Windows"
+>
+  <h1>Installation</h1>
+
+  <p>
+    ColorClip Pro is available for macOS and Windows. Follow the instructions below
+    for your operating system.
+  </p>
+
+  <h2>System Requirements</h2>
+
+  <h3>macOS</h3>
+  <ul>
+    <li>macOS 10.15 (Catalina) or later</li>
+    <li>Intel (x64) or Apple Silicon (M1/M2/M3)</li>
+    <li>50 MB disk space</li>
+  </ul>
+
+  <h3>Windows</h3>
+  <ul>
+    <li>Windows 10 or later (64-bit)</li>
+    <li>50 MB disk space</li>
+  </ul>
+
+  <h2>macOS Installation</h2>
+
+  <h3>Download</h3>
+  <ol>
+    <li>Visit the <a href="/">ColorClip Pro homepage</a></li>
+    <li>Click the download button for your Mac architecture:
+      <ul>
+        <li><strong>Apple Silicon</strong> - For M1, M2, M3 Macs</li>
+        <li><strong>Intel</strong> - For older Intel-based Macs</li>
+      </ul>
+    </li>
+    <li>The file will download as <code>ColorClip Pro-[version]-[arch].zip</code></li>
+  </ol>
+
+  <h3>Install</h3>
+  <ol>
+    <li>Locate the downloaded ZIP file in your Downloads folder</li>
+    <li>Double-click the ZIP file to extract it</li>
+    <li>Drag <code>ColorClip Pro.app</code> to your Applications folder</li>
+    <li>Launch ColorClip Pro from Applications or Spotlight</li>
+  </ol>
+
+  <h3>First Launch (macOS Security)</h3>
+  <p>
+    On first launch, macOS may show a security warning because the app is not from
+    the Mac App Store:
+  </p>
+
+  <ol>
+    <li>Right-click (or Control-click) on <code>ColorClip Pro.app</code></li>
+    <li>Select <strong>Open</strong> from the menu</li>
+    <li>Click <strong>Open</strong> in the dialog that appears</li>
+  </ol>
+
+  <p>
+    Alternatively, you can go to <strong>System Settings → Privacy & Security</strong>
+    and click <strong>Open Anyway</strong> after the first launch attempt.
+  </p>
+
+  <h2>Windows Installation</h2>
+
+  <h3>Download</h3>
+  <ol>
+    <li>Visit the <a href="/">ColorClip Pro homepage</a></li>
+    <li>Click the <strong>Download for Windows</strong> button</li>
+    <li>The file will download as <code>ColorClip Pro-[version]-win.zip</code></li>
+  </ol>
+
+  <h3>Install</h3>
+  <ol>
+    <li>Locate the downloaded ZIP file</li>
+    <li>Right-click and select <strong>Extract All...</strong></li>
+    <li>Choose a destination folder (e.g., <code>C:\Program Files\ColorClip Pro</code>)</li>
+    <li>Run <code>ColorClip Pro.exe</code> from the extracted folder</li>
+  </ol>
+
+  <h3>Create Desktop Shortcut (Optional)</h3>
+  <ol>
+    <li>Right-click on <code>ColorClip Pro.exe</code></li>
+    <li>Select <strong>Send to → Desktop (create shortcut)</strong></li>
+  </ol>
+
+  <h2>Updating ColorClip Pro</h2>
+
+  <p>
+    ColorClip Pro does not currently have automatic updates. To update:
+  </p>
+
+  <ol>
+    <li>Download the latest version from the <a href="/">homepage</a></li>
+    <li>Close the running ColorClip Pro application</li>
+    <li>Replace the old application file with the new one</li>
+    <li>Your palettes and settings are stored separately and will be preserved</li>
+  </ol>
+
+  <blockquote>
+    <strong>Note:</strong> Your palette data is stored in your system's application
+    data folder and won't be affected by updating the application.
+  </blockquote>
+
+  <h2>Uninstalling</h2>
+
+  <h3>macOS</h3>
+  <ol>
+    <li>Drag <code>ColorClip Pro.app</code> from Applications to the Trash</li>
+    <li>To remove all data, also delete:
+      <code>~/Library/Application Support/colorclip-pro</code>
+    </li>
+  </ol>
+
+  <h3>Windows</h3>
+  <ol>
+    <li>Delete the ColorClip Pro folder</li>
+    <li>To remove all data, also delete:
+      <code>%APPDATA%/colorclip-pro</code>
+    </li>
+  </ol>
+
+  <h2>Next Steps</h2>
+
+  <p>
+    Now that ColorClip Pro is installed, check out the
+    <a href="/docs/getting-started">Quick Start guide</a> to learn how to use it.
+  </p>
+</DocsLayout>
