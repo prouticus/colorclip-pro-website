@@ -1,43 +1,69 @@
-# Astro Starter Kit: Minimal
+# ColorClip Pro Website
 
-```sh
-bun create astro@latest -- --template minimal
+Marketing and documentation website for ColorClip Pro with a retro/terminal aesthetic.
+
+## Tech Stack
+
+- **Astro 5.x** - Static site framework with islands architecture
+- **React 19** - Interactive components
+- **Vercel** - Hosting and serverless functions
+- **Bun** - Package manager
+
+## Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+colorclip-pro-website/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/          # Routes (index, docs, releases, etc.)
+│   ├── components/     # React and Astro components
+│   ├── layouts/        # Page layouts
+│   ├── content/        # MDX documentation
+│   ├── assets/         # ASCII art and static assets
+│   ├── styles/         # Global CSS and design system
+│   └── utils/          # Helper functions
+├── api/                # Vercel serverless functions
+│   ├── releases.ts     # GitHub releases proxy
+│   └── waitlist.ts     # Email signup handler
+└── public/             # Static assets (images, fonts)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+# Install dependencies
+bun install
 
-Any static assets, like images, can be placed in the `public/` directory.
+# Start dev server
+bun run dev
 
-## 🧞 Commands
+# Build for production
+bun run build
 
-All commands are run from the root of the project, from a terminal:
+# Preview production build
+bun run preview
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+## Features
 
-## 👀 Want to learn more?
+- **Retro/Terminal Aesthetic**: ASCII art, CRT effects, phosphor glow
+- **Dynamic Downloads**: Auto-fetched from GitHub releases
+- **Email Waitlist**: Mobile app signup
+- **Documentation**: MDX-powered docs
+- **SEO Optimized**: Meta tags, structured data, sitemap
+- **Accessible**: WCAG 2.1 AA compliant
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Environment Variables
+
+Required for production:
+
+```env
+GITHUB_TOKEN=          # GitHub API access for releases
+API_INTERNAL_KEY=      # Auth for api.mantisarts.com
+DISCORD_SERVER_ID=     # For Discord widget stats
+```
+
+## Deployment
+
+Deployed to Vercel at \`colorclip.mantisarts.com\`
+
+Auto-deploys on push to \`main\` branch.
