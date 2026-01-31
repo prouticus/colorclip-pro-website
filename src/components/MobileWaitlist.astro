@@ -1,0 +1,68 @@
+---
+import EmailSignup from './EmailSignup';
+---
+
+<section class="mobile-waitlist section">
+  <div class="container">
+    <div class="waitlist-content">
+      <!-- Header with ASCII art -->
+      <pre class="ascii-art phosphor-glow" style="text-align: center; margin-bottom: var(--space-lg);">
+╔═══════════════════════════════════════╗
+║                                       ║
+║   MOBILE COMING SOON                  ║
+║                                       ║
+╚═══════════════════════════════════════╝
+      </pre>
+
+      <h2 style="text-align: center; color: var(--phosphor-green); margin-bottom: var(--space-md);">
+        ColorClip on the go
+      </h2>
+
+      <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto var(--space-xl);">
+        Take your color palettes anywhere. Get notified when we launch ColorClip Mobile
+        for iOS and Android.
+      </p>
+
+      <!-- Email Signup Form -->
+      <EmailSignup client:load />
+
+      <!-- Features Preview -->
+      <div style="margin-top: var(--space-2xl);">
+        <pre class="ascii-art" style="text-align: center; font-size: var(--font-size-sm); color: var(--text-tertiary);">
+┌──────────────┬──────────────┬──────────────┐
+│  📱 iOS      │  🤖 Android  │  ☁ Sync      │
+│              │              │              │
+│  Same        │  Same        │  Real-time   │
+│  features    │  features    │  across all  │
+│  on mobile   │  on mobile   │  devices     │
+└──────────────┴──────────────┴──────────────┘
+        </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mobile-waitlist {
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid var(--phosphor-dim);
+    border-bottom: 1px solid var(--phosphor-dim);
+  }
+
+  .waitlist-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .ascii-art {
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ascii-art {
+      font-size: 0.5rem;
+    }
+  }
+</style>
