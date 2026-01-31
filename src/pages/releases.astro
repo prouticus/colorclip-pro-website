@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReleaseNotes from '../components/ReleaseNotes';
+---
+
+<BaseLayout
+  title="Release Notes - ColorClip Pro"
+  description="ColorClip Pro release history, changelog, and version updates"
+>
+  <main class="container section">
+    <!-- Page Header -->
+    <div style="text-align: center; margin-bottom: var(--space-2xl);">
+      <pre class="ascii-art phosphor-glow-strong" style="margin-bottom: var(--space-md);">
+╔═══════════════════════════════════════╗
+║                                       ║
+║   RELEASE NOTES                       ║
+║                                       ║
+╚═══════════════════════════════════════╝
+      </pre>
+      <h1 class="phosphor-glow">ColorClip Pro Changelog</h1>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: var(--space-md) auto 0;">
+        Version history and release notes for ColorClip Pro. All releases are available on
+        <a href="https://github.com/prouticus/colorclip-pro/releases" target="_blank" rel="noopener" style="color: var(--phosphor-green);">
+          GitHub
+        </a>.
+      </p>
+    </div>
+
+    <!-- Release Notes Component -->
+    <div style="max-width: 800px; margin: 0 auto;">
+      <ReleaseNotes client:load />
+    </div>
+
+    <!-- Back to Home -->
+    <div style="text-align: center; margin-top: var(--space-2xl); padding-top: var(--space-2xl); border-top: 1px solid var(--phosphor-dim);">
+      <a href="/" class="terminal-button" style="text-decoration: none;">
+        ← Back to Home
+      </a>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  /* Style markdown content in release notes */
+  :global(.release-body) {
+    font-family: var(--font-mono);
+  }
+
+  :global(.release-body h1),
+  :global(.release-body h2),
+  :global(.release-body h3) {
+    color: var(--phosphor-green);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  :global(.release-body ul),
+  :global(.release-body ol) {
+    margin-left: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  :global(.release-body li) {
+    margin-bottom: var(--space-xs);
+  }
+
+  :global(.release-body code) {
+    background: rgba(51, 255, 51, 0.1);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 2px;
+    color: var(--phosphor-green);
+  }
+
+  :global(.release-body pre) {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--phosphor-dim);
+    padding: var(--space-md);
+    overflow-x: auto;
+    border-radius: 4px;
+    margin: var(--space-md) 0;
+  }
+
+  :global(.release-body a) {
+    color: var(--phosphor-green);
+    text-decoration: underline;
+  }
+
+  :global(.release-body a:hover) {
+    text-shadow: 0 0 5px var(--phosphor-glow);
+  }
+</style>
