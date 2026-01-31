@@ -1,4 +1,5 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -17,7 +18,7 @@ export default function EmailSignup({ source = 'mobile-waitlist', className = ''
   const [status, setStatus] = useState<Status>('idle');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Basic validation
