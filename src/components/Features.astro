@@ -1,0 +1,186 @@
+---
+// Features section showcasing ColorClip Pro capabilities
+---
+
+<section class="features section">
+  <div class="container">
+    <h2 class="phosphor-glow" style="text-align: center; margin-bottom: var(--space-2xl);">
+      Everything you need for professional color work
+    </h2>
+
+    <div class="features-grid">
+      <!-- Feature 1: Unlimited Palettes -->
+      <article class="feature-card">
+        <pre class="feature-icon">
+┌─────────┐
+│ ▓ ▓ ▓ ▓ │
+│ ▓ ▓ ▓ ▓ │
+│ ▓ ▓ ▓ ▓ │
+└─────────┘
+        </pre>
+        <h3>Unlimited Palettes</h3>
+        <p>
+          Create and organize up to 256 swatches per palette. Name, label,
+          and track color history for each swatch.
+        </p>
+      </article>
+
+      <!-- Feature 2: Screen Eyedropper -->
+      <article class="feature-card">
+        <pre class="feature-icon">
+   ╭───╮
+   │ ◉ │
+   │ │ │
+   ╰─┼─╯
+     ▼
+        </pre>
+        <h3>Screen Eyedropper</h3>
+        <p>
+          Pick colors from anywhere on your screen with pixel-perfect precision.
+          Works across all applications.
+        </p>
+      </article>
+
+      <!-- Feature 3: Cloud Sync -->
+      <article class="feature-card">
+        <pre class="feature-icon">
+  ☁  ↕  ☁
+     │
+  ┌──┴──┐
+  │█████│
+  └─────┘
+        </pre>
+        <h3>Cloud Sync</h3>
+        <p>
+          Sync palettes across all your devices in real-time. Sign in with
+          Google, GitHub, or Discord.
+        </p>
+      </article>
+
+      <!-- Feature 4: All Color Formats -->
+      <article class="feature-card">
+        <pre class="feature-icon">
+#FF5733
+RGB(255…)
+HSV(11…)
+α: 0.80
+        </pre>
+        <h3>All Color Formats</h3>
+        <p>
+          Work with HEX, RGB, HSV, and normalized values. Copy in any format
+          with a single click.
+        </p>
+      </article>
+
+      <!-- Feature 5: Intuitive Color Picker -->
+      <article class="feature-card">
+        <pre class="feature-icon">
+    ╭───╮
+   ╱ ◉ ◉ ╲
+  │ ◉ ● ◉ │
+   ╲ ◉ ◉ ╱
+    ╰───╯
+        </pre>
+        <h3>Intuitive Picker</h3>
+        <p>
+          Choose between color wheel or slider-based picking. Full alpha
+          channel support for transparency.
+        </p>
+      </article>
+
+      <!-- Feature 6: Multi-language -->
+      <article class="feature-card">
+        <pre class="feature-icon">
+┌───────────┐
+│ EN FR DE  │
+│ ES IT RU  │
+│ JA KO ZH  │
+└───────────┘
+        </pre>
+        <h3>9 Languages</h3>
+        <p>
+          Available in English, Spanish, French, German, Italian, Russian,
+          Korean, Japanese, and Chinese.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--phosphor-dim);
+    border-bottom: 1px solid var(--phosphor-dim);
+  }
+
+  .features h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .feature-card {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--phosphor-dim);
+    padding: var(--space-lg);
+    border-radius: 4px;
+    transition: all var(--anim-normal);
+  }
+
+  .feature-card:hover {
+    border-color: var(--phosphor-green);
+    box-shadow: 0 0 20px var(--phosphor-glow);
+    transform: translateY(-4px);
+  }
+
+  .feature-icon {
+    font-family: var(--font-mono);
+    line-height: 1.1;
+    color: var(--phosphor-green);
+    text-align: center;
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-base);
+  }
+
+  .feature-card h3 {
+    color: var(--phosphor-green);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+    text-align: center;
+  }
+
+  .feature-card p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .feature-icon {
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  /* Accessibility: Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .feature-card {
+      transition: none;
+    }
+
+    .feature-card:hover {
+      transform: none;
+    }
+  }
+</style>

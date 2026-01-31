@@ -1,13 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
 ---
 
 <BaseLayout title="ColorClip Pro - Professional Color Management">
-  <main class="container section">
-    <Hero />
+  <Hero />
+  <Features />
 
-      <pre class="ascii-art" style="margin-top: var(--space-2xl);">
+  <!-- Dev Status (temporary) -->
+  <div class="container" style="text-align: center; padding: var(--space-2xl) 0;">
+    <pre class="ascii-art" style="display: inline-block;">
 ┌─────────────────────────────────────────────┐
 │ SYSTEM STATUS                               │
 ├─────────────────────────────────────────────┤
@@ -15,12 +18,11 @@ import Hero from '../components/Hero.astro';
 │  CRT Effects: ✓ ACTIVE                      │
 │  Phosphor Glow: ✓ ENABLED                   │
 │  ASCII Art: ✓ RENDERED                      │
+│  Features: ✓ DISPLAYED                      │
 └─────────────────────────────────────────────┘
-      </pre>
-
-      <p style="margin-top: var(--space-xl); color: var(--text-tertiary);">
-        🚧 Website under construction 🚧
-      </p>
-    </div>
-  </main>
+    </pre>
+    <p style="margin-top: var(--space-lg); color: var(--text-tertiary);">
+      🚧 Website under construction 🚧
+    </p>
+  </div>
 </BaseLayout>
