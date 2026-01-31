@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DownloadButtons from '../components/DownloadButtons';
 ---
 
 <BaseLayout title="ColorClip Pro - Professional Color Management">
@@ -29,9 +30,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         > Professional color management for designers & developers<span class="cursor">█</span>
       </p>
 
-      <div style="margin-top: var(--space-2xl); display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-        <button class="terminal-button">Download macOS</button>
-        <button class="terminal-button">Download Windows</button>
+      <div style="margin-top: var(--space-2xl);">
+        <DownloadButtons client:load />
       </div>
 
       <pre class="ascii-art" style="margin-top: var(--space-2xl);">
