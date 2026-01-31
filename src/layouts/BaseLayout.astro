@@ -8,7 +8,7 @@ interface Props {
 const {
   title,
   description = 'Professional color management for designers & developers. Sync palettes, pick colors, organize swatches.',
-  ogImage = '/og-image.png'
+  ogImage = '/icon.jpg'
 } = Astro.props;
 
 // Canonical URL - only set if site is configured
@@ -23,6 +23,7 @@ const canonicalURL = Astro.site
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icon.jpg" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Primary Meta Tags -->
