@@ -1,38 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import DownloadButtons from '../components/DownloadButtons';
+import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout title="ColorClip Pro - Professional Color Management">
   <main class="container section">
-    <div style="text-align: center;">
-      <!-- App Icon -->
-      <div style="margin-bottom: var(--space-xl);">
-        <img
-          src="/icon.jpg"
-          alt="ColorClip Pro App Icon"
-          style="width: 120px; height: 120px; border-radius: 20px; box-shadow: 0 0 30px var(--phosphor-glow); border: 2px solid var(--phosphor-green);"
-        />
-      </div>
-
-      <pre class="ascii-logo phosphor-glow-strong">
- ██████╗ ██████╗ ██╗      ██████╗ ██████╗  ██████╗██╗     ██╗██████╗
-██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██║     ██║██╔══██╗
-██║     ██║   ██║██║     ██║   ██║██████╔╝██║     ██║     ██║██████╔╝
-██║     ██║   ██║██║     ██║   ██║██╔══██╗██║     ██║     ██║██╔═══╝
-╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║╚██████╗███████╗██║██║
- ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝
-                                                               PRO v0.10
-      </pre>
-
-      <h1 class="phosphor-glow" style="margin-top: var(--space-lg);">ColorClip Pro</h1>
-      <p style="font-size: var(--font-size-lg); color: var(--text-secondary);">
-        > Professional color management for designers & developers<span class="cursor">█</span>
-      </p>
-
-      <div style="margin-top: var(--space-2xl);">
-        <DownloadButtons client:load />
-      </div>
+    <Hero />
 
       <pre class="ascii-art" style="margin-top: var(--space-2xl);">
 ┌─────────────────────────────────────────────┐
