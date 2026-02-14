@@ -1,0 +1,35 @@
+---
+import DownloadButtons from '../DownloadButtons.tsx';
+---
+
+<section class="bg-gradient-download text-white section">
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto">
+      <!-- Section Header -->
+      <h2 class="font-display font-bold mb-4">
+        Download ColorClip Pro
+      </h2>
+      <p class="text-xl text-blue-100 mb-12">
+        Free and open source. Available for macOS and Windows.
+      </p>
+
+      <!-- Download Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        <DownloadButtons client:load variant="light" />
+      </div>
+
+      <!-- GitHub Link -->
+      <p class="text-sm text-blue-200">
+        Also available on
+        <a
+          href="https://github.com/prouticus/colorclip-pro/releases"
+          class="text-white hover:text-blue-100 underline transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Releases
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

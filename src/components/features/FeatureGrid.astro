@@ -1,0 +1,66 @@
+---
+import FeatureCard from './FeatureCard.astro';
+
+const features = [
+  {
+    iconEmoji: '🎨',
+    title: 'Custom Palettes with Names & Labels',
+    description: 'Organize your colors with custom palette names and individual swatch labels. Perfect for branding, design systems, and project workflows.'
+  },
+  {
+    iconEmoji: '☁️',
+    title: 'Cloud Sync Across Windows & Mac',
+    description: 'Seamlessly sync your palettes across all your devices. Start on Mac, finish on Windows - your colors follow you everywhere.'
+  },
+  {
+    iconEmoji: '🎡',
+    title: 'Wheel or Slider Color Picker',
+    description: 'Choose your preferred color selection method. Toggle between circular color wheel or traditional RGB/HSV sliders.'
+  },
+  {
+    iconEmoji: '💾',
+    title: 'Offline Mode with Folder Sync',
+    description: 'No login required. Works with Google Drive, Dropbox, iCloud, OneDrive, and any sync folder service.'
+  },
+  {
+    iconEmoji: '🌓',
+    title: 'Four Levels of Dark Mode',
+    description: 'Match your workspace aesthetic. Choose from light mode to progressively darker themes that complement your workflow.'
+  },
+  {
+    iconEmoji: '🔢',
+    title: 'Convert for Game Engines',
+    description: 'Instant conversion between 0-255 (RGB) and 0.0-1.0 (normalized) formats. Essential for Unity, Unreal, and shader development.'
+  },
+  {
+    iconEmoji: '🔍',
+    title: 'Fuzzy Eyedropper Support',
+    description: 'Adjustable eyedropper size for precise color picking. Perfect for grabbing colors from blurred edges or anti-aliased elements.'
+  }
+];
+---
+
+<section class="bg-gray-50 section">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="font-display font-bold text-gray-900 mb-4">
+        Features
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Everything you need for professional color management
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <FeatureCard
+          iconEmoji={feature.iconEmoji}
+          title={feature.title}
+          description={feature.description}
+        />
+      ))}
+    </div>
+  </div>
+</section>

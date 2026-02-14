@@ -1,0 +1,6 @@
+# robots.txt for ColorClip Pro
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://colorclip.mantisarts.com/sitemap.xml

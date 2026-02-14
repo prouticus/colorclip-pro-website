@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  iconEmoji: string;
+}
+
+const { title, description, iconEmoji } = Astro.props;
+---
+
+<div class="card group border border-gray-200">
+  <!-- Icon -->
+  <div class="feature-icon mb-6">
+    <span class="text-3xl">{iconEmoji}</span>
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+    {title}
+  </h3>
+
+  <!-- Description -->
+  <p class="text-gray-600 leading-relaxed">
+    {description}
+  </p>
+</div>

@@ -1,0 +1,53 @@
+---
+import DownloadButtons from '../DownloadButtons.tsx';
+---
+
+<section class="bg-gradient-hero">
+  <div class="container-custom section">
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- App Icon -->
+      <div class="flex justify-center mb-8">
+        <img
+          src="/icon.jpg"
+          alt="ColorClip Pro Icon"
+          width="256"
+          height="256"
+          class="rounded-3xl shadow-2xl ring-4 ring-primary-100"
+        />
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display font-bold text-gray-900 mb-6 animate-fade-in">
+        Professional Color Management<br />
+        <span class="gradient-text">for Creatives</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Powerful color picker with cloud sync, offline mode, and advanced features for designers and developers on Windows and macOS.
+      </p>
+
+      <!-- Download Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+        <DownloadButtons client:load />
+      </div>
+
+      <!-- Version Badge -->
+      <p class="text-sm text-gray-500">
+        Version 0.10.x • Free & Open Source
+      </p>
+    </div>
+
+    <!-- App Screenshot -->
+    <div class="mt-16 max-w-5xl mx-auto">
+      <div class="rounded-2xl shadow-2xl overflow-hidden border border-gray-200 bg-white">
+        <img
+          src="/app-screenshot.png"
+          alt="ColorClip Pro Interface"
+          class="w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>

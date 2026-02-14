@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
 import vercel from '@astrojs/vercel';
 
@@ -9,6 +10,6 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   // Update this with your actual domain after deployment
   site: 'https://colorclip.mantisarts.com',
-  integrations: [react()],
+  integrations: [react(), tailwind()],
   adapter: vercel()
 });

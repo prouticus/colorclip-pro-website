@@ -47,21 +47,26 @@ const canonicalURL = Astro.site
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
-    
-    <!-- Fonts - JetBrains Mono from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Performance Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Mobile App Capable -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
     <!-- Global Styles -->
     <style is:global>
       @import '../styles/global.css';
     </style>
   </head>
-  <body class="crt-screen">
+  <body>
     <slot />
     <Footer />
   </body>
