@@ -15,13 +15,13 @@
    ============================================ */
 
 :root {
-  /* Primary Colors */
-  --primary-50: #eff6ff;
-  --primary-100: #dbeafe;
-  --primary-200: #bfdbfe;
-  --primary-600: #2563eb;
-  --primary-700: #1d4ed8;
-  --primary-800: #1e40af;
+  /* Primary Colors - Orange-Red Theme */
+  --primary-50: #fff7ed;
+  --primary-100: #ffedd5;
+  --primary-200: #fed7aa;
+  --primary-600: #ea580c;
+  --primary-700: #c2410c;
+  --primary-800: #9a3412;
 
   /* Neutral Colors */
   --gray-50: #f9fafb;
@@ -36,7 +36,7 @@
   --gray-900: #111827;
 
   /* Accent Colors */
-  --accent-purple: #7c3aed;
+  --accent-red: #dc2626;
   --accent-green: #10b981;
   --accent-orange: #f59e0b;
 
@@ -51,21 +51,45 @@
   --bg-light: #f9fafb;
   --bg-dark: #1f2937;
 
+  /* Retro Terminal / Phosphor Theme */
+  --phosphor-green: #33ff33;
+  --phosphor-dim: rgba(51, 255, 51, 0.3);
+  --phosphor-glow: rgba(51, 255, 51, 0.5);
+  --text-primary: #e5e5e5;
+  --text-secondary: #b0b0b0;
+  --bg-terminal: #0a0a0a;
+  --bg-terminal-light: rgba(0, 0, 0, 0.6);
+
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+
   /* Spacing System */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-24: 6rem;     /* 96px */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-1: 0.25rem;     /* 4px */
+  --space-2: 0.5rem;      /* 8px */
+  --space-3: 0.75rem;     /* 12px */
+  --space-4: 1rem;        /* 16px */
+  --space-6: 1.5rem;      /* 24px */
+  --space-8: 2rem;        /* 32px */
+  --space-12: 3rem;       /* 48px */
+  --space-16: 4rem;       /* 64px */
+  --space-24: 6rem;       /* 96px */
 
   /* Border Radius */
   --radius-sm: 0.25rem;   /* 4px */
@@ -86,6 +110,9 @@
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --anim-fast: 150ms ease;
+  --anim-normal: 300ms ease;
+  --anim-slow: 500ms ease;
 }
 
 /* ============================================
@@ -206,13 +233,13 @@
 
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-accent-purple bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-600 to-accent-red bg-clip-text text-transparent;
   }
 
   /* Feature Icon */
   .feature-icon {
     @apply w-12 h-12 rounded-lg flex items-center justify-center
-           bg-gradient-to-br from-primary-500 to-accent-purple
+           bg-gradient-to-br from-primary-600 to-accent-red
            text-white;
   }
 }
@@ -224,15 +251,15 @@
 @layer utilities {
   /* Gradient Backgrounds */
   .bg-gradient-hero {
-    background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 100%);
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   }
 
   .bg-gradient-download {
-    background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #c2410c 0%, #dc2626 100%);
   }
 
   .bg-gradient-feature {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
   }
 
   /* Animations */
@@ -274,6 +301,71 @@
 /* Focus Visible */
 .focus-visible:focus {
   @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* ============================================
+   Retro Terminal Theme Utilities
+   ============================================ */
+
+/* ASCII Art & Terminal Elements */
+.ascii-art {
+  font-family: var(--font-mono);
+  line-height: 1.2;
+  color: var(--phosphor-green);
+  background: rgba(0, 0, 0, 0.4);
+  padding: var(--space-lg);
+  border: 1px solid var(--phosphor-dim);
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.ascii-logo {
+  font-family: var(--font-mono);
+  line-height: 1;
+  color: var(--phosphor-green);
+  text-shadow: 0 0 10px var(--phosphor-glow);
+}
+
+/* Phosphor Glow Effects */
+.phosphor-glow {
+  color: var(--phosphor-green);
+  text-shadow: 0 0 10px var(--phosphor-glow);
+}
+
+.phosphor-glow-strong {
+  color: var(--phosphor-green);
+  text-shadow: 0 0 20px var(--phosphor-glow), 0 0 40px rgba(51, 255, 51, 0.3);
+}
+
+/* Terminal Button */
+.terminal-button {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  background: rgba(51, 255, 51, 0.1);
+  border: 1px solid var(--phosphor-green);
+  color: var(--phosphor-green);
+  font-family: var(--font-mono);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all var(--anim-fast);
+}
+
+.terminal-button:hover {
+  background: rgba(51, 255, 51, 0.2);
+  box-shadow: 0 0 15px var(--phosphor-glow);
+  transform: translateY(-1px);
+}
+
+/* Container for terminal-styled content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-2xl) 0;
 }
 
 /* ============================================
