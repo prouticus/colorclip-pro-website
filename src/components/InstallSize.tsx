@@ -34,7 +34,7 @@ export default function InstallSize({
         const sizes: Sizes = {
           macSilicon: findSize(release, (n) => n.includes('-arm64.zip')),
           macIntel: findSize(release, (n) => n.includes('-x64.zip') && !n.includes('win')),
-          windows: findSize(release, (n) => n.includes('-win.zip')),
+          windows: findSize(release, (n) => n.includes('win') && n.endsWith('.zip')),
         };
         setSize(sizes[platform] ?? null);
       })

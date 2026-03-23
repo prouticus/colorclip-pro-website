@@ -28,9 +28,9 @@ export interface DownloadLinks {
 /**
  * Extract download links from release assets
  * Based on electron-builder.json naming patterns:
- * - macOS x64: ColorClip Pro-{version}-x64.zip
- * - macOS arm64: ColorClip Pro-{version}-arm64.zip
- * - Windows: ColorClip Pro-{version}-win.zip
+ * - macOS x64: ColorClip.Pro-{version}-mac-x64.zip
+ * - macOS arm64: ColorClip.Pro-{version}-mac-arm64.zip
+ * - Windows: ColorClip.Pro-{version}-win-x64.zip
  */
 export function getDownloadLinks(assets: Asset[]): DownloadLinks {
   return {
@@ -41,7 +41,7 @@ export function getDownloadLinks(assets: Asset[]): DownloadLinks {
       (a) => a.name.includes('-arm64.zip')
     )?.browser_download_url,
     windows: assets.find(
-      (a) => a.name.includes('-win.zip')
+      (a) => a.name.includes('win') && a.name.endsWith('.zip')
     )?.browser_download_url,
   };
 }
