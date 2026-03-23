@@ -20,17 +20,15 @@ export default function TeaserGrid() {
       {gifs.map((gif) => (
         <div
           key={gif.file}
-          className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-md flex flex-col"
+          className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-md"
+          style={{ height: '360px' }}
         >
           <img
             src={`/teaser_videos/${gif.file}`}
             alt={gif.label}
-            className="w-full h-auto block"
+            className="w-full h-full object-cover block"
             loading="lazy"
           />
-          <p className="text-xs text-center text-gray-500 py-2 px-1 font-medium">
-            {gif.label}
-          </p>
         </div>
       ))}
     </div>
