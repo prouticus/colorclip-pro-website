@@ -7,7 +7,8 @@
       "Bash(gh release:*)",
       "Bash(bun run build:*)",
       "Bash(electron-builder:*)",
-      "Bash(npx electron-builder:*)"
+      "Bash(npx electron-builder:*)",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); r=data[0]; print\\(''''Tag:'''', r[''''tag_name'''']\\); print\\(''''Assets:''''\\); [print\\('''' -'''', a[''''name''''], f''''\\({a[\"\"size\"\"]} bytes\\)''''\\) for a in r[''''assets'''']]\")"
     ]
   }
 }
