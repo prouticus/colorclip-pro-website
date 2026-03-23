@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(where:*)"
+      "Bash(where:*)",
+      "WebFetch(domain:claude.com)",
+      "WebFetch(domain:x.com)",
+      "Bash(gh release:*)",
+      "Bash(bun run build:*)",
+      "Bash(electron-builder:*)",
+      "Bash(npx electron-builder:*)"
     ]
   }
 }
