@@ -9,26 +9,39 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <h1>Quick Start Guide</h1>
 
   <p>
-    This guide will walk you through the basics of using ColorClip Pro in just a few minutes.
+    This guide walks you through the basics of ColorClip Pro. You'll be picking and
+    organizing colors in just a few minutes.
   </p>
 
+  <img
+    src="/teaser_videos/00_Draggable_Color_Drawer.gif"
+    alt="ColorClip Pro color drawer overview"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">ColorClip Pro's draggable color drawer sits on top of any application</span>
+
+  <!-- ─── Step 1 ─── -->
   <h2>Step 1: Create Your First Palette</h2>
 
   <p>
-    When you first launch ColorClip Pro, you'll see an empty palette grid. Each palette
-    can hold up to 256 color swatches.
+    When you first launch ColorClip Pro, you'll see an empty palette. Each palette can
+    hold up to 256 color swatches.
   </p>
 
-  <pre class="ascii-art">
-┌─────────────────────────────────┐
-│ My First Palette                │
-├─────────────────────────────────┤
-│ □ □ □ □ □ □ □ □ □ □            │
-│ □ □ □ □ □ □ □ □ □ □            │
-│ (empty swatches)                │
-└─────────────────────────────────┘
-  </pre>
+  <ol>
+    <li>Click the <strong>+ New Palette</strong> button (or press <code>Cmd+N</code> / <code>Ctrl+N</code>)</li>
+    <li>Give your palette a name (e.g., "Brand Colors")</li>
+    <li>Empty swatch slots appear ready for colors</li>
+  </ol>
 
+  <img
+    src="/teaser_videos/04_Unlimited_Palettes.gif"
+    alt="Creating and switching between unlimited palettes"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">You can create unlimited palettes and switch between them instantly</span>
+
+  <!-- ─── Step 2 ─── -->
   <h2>Step 2: Add a Color</h2>
 
   <p>There are three ways to add a color to your palette:</p>
@@ -36,99 +49,161 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <h3>Method 1: Color Picker</h3>
   <ol>
     <li>Click an empty swatch slot</li>
-    <li>Use the color wheel or sliders to select a color</li>
-    <li>Adjust the alpha channel if needed</li>
-    <li>The color is automatically saved to that slot</li>
+    <li>Choose from the color wheel or use the sliders</li>
+    <li>Switch between multiple color models (HEX, RGB, HSV, etc.)</li>
+    <li>The color saves automatically to that slot</li>
   </ol>
+
+  <img
+    src="/teaser_videos/02_Multiple_Color_Models.gif"
+    alt="Switching between color models in the picker"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Switch between HEX, RGB, HSV, and more color models without losing your color</span>
 
   <h3>Method 2: Eyedropper</h3>
   <ol>
     <li>Click the eyedropper button or press <code>Cmd+E</code> (Mac) / <code>Ctrl+E</code> (Windows)</li>
-    <li>Your screen will dim and show a magnified preview</li>
-    <li>Click anywhere on your screen to capture that color</li>
-    <li>The color is added to the first empty swatch slot</li>
+    <li>Your screen dims and shows a magnified preview</li>
+    <li>Adjust the eyedropper size for the precision you need</li>
+    <li>Click anywhere on screen to capture that color</li>
   </ol>
 
-  <h3>Method 3: Paste HEX Code</h3>
+  <img
+    src="/teaser_videos/06_Fuzzy_Eyedropper.gif"
+    alt="Fuzzy eyedropper picking colors from the screen"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">The fuzzy eyedropper lets you adjust capture radius — great for anti-aliased or blurred edges</span>
+
+  <h3>Method 3: Paste a HEX Code</h3>
   <ol>
-    <li>Copy a HEX color code (e.g., <code>#FF5733</code>)</li>
-    <li>Click an empty swatch</li>
+    <li>Copy any HEX color code (e.g., <code>#FF5733</code>)</li>
+    <li>Click an empty swatch slot</li>
     <li>Paste the code directly into the color input</li>
   </ol>
 
+  <!-- ─── Step 3 ─── -->
   <h2>Step 3: Organize Your Colors</h2>
 
   <h3>Label Swatches</h3>
   <p>
-    Right-click on any swatch and select "Edit Label" to give it a meaningful name
-    like "Brand Primary" or "Accent Blue".
+    Right-click any swatch and choose <strong>Edit Label</strong> to give it a meaningful
+    name like "Brand Primary" or "Accent Blue". Labels appear on hover.
   </p>
+
+  <img
+    src="/teaser_videos/09_Swatch_Label.gif"
+    alt="Adding labels to color swatches"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Swatch labels make it easy to identify colors at a glance</span>
+
+  <h3>Copy & Paste Swatches</h3>
+  <p>
+    Right-click any swatch to copy it, then paste it into another slot or palette.
+    Great for duplicating colors across projects.
+  </p>
+
+  <img
+    src="/teaser_videos/08_Swatch_Copy_Paste.gif"
+    alt="Copying and pasting swatches between palettes"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Copy and paste swatches between any palettes</span>
 
   <h3>Rearrange Swatches</h3>
-  <p>
-    Drag and drop swatches to reorder them. Your layout is preserved automatically.
-  </p>
+  <p>Drag and drop swatches to reorder them. Your layout is saved automatically.</p>
 
   <h3>Delete Swatches</h3>
-  <p>
-    Right-click a swatch and select "Delete" or press <code>Delete</code> when a swatch is selected.
-  </p>
+  <p>Right-click a swatch and select <strong>Delete</strong>, or press <code>Delete</code> when a swatch is selected.</p>
 
+  <!-- ─── Step 4 ─── -->
   <h2>Step 4: Copy Colors</h2>
 
   <p>
-    Click on any swatch to copy its color value. The format depends on your settings:
+    Click any swatch to instantly copy its color value. ColorClip Pro supports automatic
+    format conversion — see your color in every format simultaneously.
   </p>
 
+  <img
+    src="/teaser_videos/05_Automatic_Value_Conversion.gif"
+    alt="Automatic color value conversion between formats"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Change the color model and your value updates instantly — no manual conversion needed</span>
+
+  <p>Supported copy formats:</p>
   <ul>
-    <li><strong>HEX</strong> - <code>#FF5733</code></li>
-    <li><strong>RGB</strong> - <code>rgb(255, 87, 51)</code></li>
-    <li><strong>HSV</strong> - <code>hsv(11, 80%, 100%)</code></li>
-    <li><strong>Normalized RGB</strong> - <code>1.0, 0.34, 0.2</code></li>
+    <li><strong>HEX</strong> — <code>#FF5733</code></li>
+    <li><strong>RGB</strong> — <code>rgb(255, 87, 51)</code></li>
+    <li><strong>HSV</strong> — <code>hsv(11, 80%, 100%)</code></li>
+    <li><strong>Normalized RGB</strong> — <code>1.0, 0.34, 0.2</code> (for game engines)</li>
   </ul>
 
-  <p>
-    Change the copy format in Settings → Copy Format.
-  </p>
+  <div class="step-callout">
+    <strong>Tip:</strong> Change your default copy format in <strong>Settings → Copy Format</strong>.
+    Game developers: use Normalized RGB for Unity and Unreal Engine.
+  </div>
 
+  <!-- ─── Step 5 ─── -->
   <h2>Step 5: Enable Cloud Sync (Optional)</h2>
 
   <p>
-    To sync your palettes across devices:
+    Sync your palettes across all your devices — Windows and Mac — with a single click.
+    No complicated setup required.
   </p>
+
+  <img
+    src="/teaser_videos/11_Easy_Cloud_Sync.gif"
+    alt="Setting up cloud sync in ColorClip Pro"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Cloud sync setup takes seconds and works across Windows and macOS</span>
 
   <ol>
     <li>Click the cloud icon in the top-right corner</li>
     <li>Sign in with Google, GitHub, or Discord</li>
-    <li>Your palettes will sync automatically</li>
+    <li>Your palettes sync automatically in real time</li>
     <li>Install ColorClip Pro on other devices and sign in with the same account</li>
   </ol>
 
-  <blockquote>
-    <strong>Tip:</strong> Cloud sync works in real-time. Changes you make on one device
-    appear instantly on all your other devices!
-  </blockquote>
+  <img
+    src="/teaser_videos/07_Cross_OS_Cloud_Sync.gif"
+    alt="Cross-platform cloud sync between Windows and Mac"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Your palettes stay in sync across Windows and macOS — changes appear instantly on all devices</span>
 
-  <h2>Common Workflows</h2>
+  <div class="step-callout">
+    <strong>Prefer offline?</strong> ColorClip Pro also supports fully offline mode with
+    folder sync — drop your palette files into any shared folder (Dropbox, Google Drive,
+    iCloud, OneDrive) and it syncs automatically without an account.
+  </div>
 
-  <h3>Building a Brand Color Palette</h3>
-  <ol>
-    <li>Create a new palette named "Brand Colors"</li>
-    <li>Add your primary brand color</li>
-    <li>Add secondary, accent, and neutral colors</li>
-    <li>Label each swatch (e.g., "Primary", "Accent", "Text")</li>
-    <li>Use the eyedropper to match colors from your logo or website</li>
-  </ol>
+  <img
+    src="/teaser_videos/01_Fully_Offline_Mode.gif"
+    alt="Fully offline mode with folder sync"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Offline mode: point ColorClip Pro at any sync folder — no login required</span>
 
-  <h3>Extracting Colors from a Design</h3>
-  <ol>
-    <li>Open your design file in any application</li>
-    <li>Press <code>Cmd+E</code> / <code>Ctrl+E</code> to activate the eyedropper</li>
-    <li>Click colors in your design to capture them</li>
-    <li>ColorClip Pro runs in the background while you work</li>
-    <li>All captured colors are saved to your active palette</li>
-  </ol>
+  <!-- ─── Dark Mode ─── -->
+  <h2>Step 6: Customize Your Theme</h2>
 
+  <p>
+    ColorClip Pro offers four levels of dark mode so it fits seamlessly into your
+    workspace, whether you prefer a bright UI or a deep dark one.
+  </p>
+
+  <img
+    src="/teaser_videos/03_Multiple_Dark_Modes.gif"
+    alt="Multiple dark mode levels in ColorClip Pro"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Choose from light, dim, dark, and deep dark themes in Settings → Appearance</span>
+
+  <!-- ─── Keyboard Shortcuts ─── -->
   <h2>Keyboard Shortcuts</h2>
 
   <table>
@@ -163,11 +238,12 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
     </tbody>
   </table>
 
+  <!-- ─── Next Steps ─── -->
   <h2>Next Steps</h2>
 
   <ul>
     <li>Explore <a href="/docs/features/palettes">advanced palette features</a></li>
-    <li>Learn about <a href="/docs/features/cloud-sync">cloud sync</a></li>
-    <li>Check out <a href="/docs/guides/workflows">color workflow guides</a></li>
+    <li>Learn about <a href="/docs/faq">frequently asked questions</a></li>
+    <li>See all <a href="/releases">release notes</a></li>
   </ul>
 </DocsLayout>

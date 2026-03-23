@@ -10,8 +10,15 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
 
   <p>
     Palettes are the core organizational unit in ColorClip Pro. Each palette can hold
-    up to 256 color swatches, organized in a customizable grid.
+    up to 256 color swatches, arranged in a customizable grid.
   </p>
+
+  <img
+    src="/teaser_videos/04_Unlimited_Palettes.gif"
+    alt="Switching between unlimited palettes"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Create unlimited palettes and switch between them instantly from the dropdown</span>
 
   <h2>Creating Palettes</h2>
 
@@ -24,95 +31,104 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
     <li>Start adding swatches!</li>
   </ol>
 
-  <h2>Palette Grid</h2>
-
-  <p>
-    The palette grid displays all your swatches in a visual layout. Empty slots are
-    shown as outlined squares, while filled swatches display their color.
-  </p>
-
-  <pre class="ascii-art">
-┌──────────────────────────────────┐
-│ Brand Colors (12 swatches)       │
-├──────────────────────────────────┤
-│ ■ ■ ■ ■ □ □ □ □ □ □             │
-│ ■ ■ ■ ■ ■ ■ ■ ■ □ □             │
-│                                  │
-│ ■ = Filled swatch                │
-│ □ = Empty slot                   │
-└──────────────────────────────────┘
-  </pre>
-
   <h2>Managing Swatches</h2>
 
   <h3>Adding Swatches</h3>
   <ul>
-    <li><strong>Click empty slot</strong> - Opens color picker</li>
-    <li><strong>Eyedropper</strong> - Adds to first empty slot</li>
-    <li><strong>Paste HEX</strong> - Paste color code into slot</li>
+    <li><strong>Click an empty slot</strong> — opens the color picker</li>
+    <li><strong>Eyedropper</strong> — captured color goes into the first empty slot</li>
+    <li><strong>Paste HEX</strong> — paste a color code directly into a slot</li>
   </ul>
 
   <h3>Editing Swatches</h3>
   <ul>
-    <li><strong>Click swatch</strong> - Copy color value</li>
-    <li><strong>Double-click</strong> - Edit color</li>
-    <li><strong>Right-click</strong> - Show context menu</li>
+    <li><strong>Click swatch</strong> — copies the color value to your clipboard</li>
+    <li><strong>Double-click</strong> — opens the color editor</li>
+    <li><strong>Right-click</strong> — shows the full context menu</li>
   </ul>
 
   <h3>Swatch Labels</h3>
   <p>
-    Each swatch can have a custom label to help you remember its purpose:
+    Give each swatch a custom label so you always know what it's for.
+    Labels appear when you hover over the swatch.
   </p>
 
   <ol>
     <li>Right-click on a swatch</li>
     <li>Select <strong>Edit Label</strong></li>
-    <li>Enter a name like "Primary Button" or "Text Color"</li>
-    <li>Labels appear when you hover over the swatch</li>
+    <li>Type a name like "Primary Button" or "Text Color"</li>
+    <li>Press Enter to save</li>
   </ol>
+
+  <img
+    src="/teaser_videos/09_Swatch_Label.gif"
+    alt="Adding and editing swatch labels"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Labels make every swatch self-documenting — hover to see the name</span>
 
   <h3>Color History</h3>
   <p>
-    ColorClip Pro tracks the history of each swatch, recording every change:
+    ColorClip Pro records every change to a swatch so you can go back in time and
+    restore any previous version.
   </p>
 
   <ol>
     <li>Right-click on a swatch</li>
     <li>Select <strong>View History</strong></li>
-    <li>See all previous colors and when they changed</li>
+    <li>Browse all previous colors with timestamps</li>
     <li>Click any historical color to restore it</li>
   </ol>
+
+  <img
+    src="/teaser_videos/10_Swatch_History.gif"
+    alt="Viewing and restoring swatch color history"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Swatch history lets you undo color changes without losing your work</span>
+
+  <h3>Copy & Paste Swatches</h3>
+  <p>
+    Duplicate swatches within a palette or across different palettes using copy and paste.
+  </p>
+
+  <img
+    src="/teaser_videos/08_Swatch_Copy_Paste.gif"
+    alt="Copy and pasting swatches between palettes"
+    class="doc-screenshot"
+  />
+  <span class="doc-screenshot-caption">Copy swatches from one palette and paste them into another in one action</span>
 
   <h2>Organizing Swatches</h2>
 
   <h3>Drag and Drop</h3>
   <p>
-    Rearrange swatches by dragging them to different positions in the grid.
-    Your layout is automatically saved.
+    Drag swatches to rearrange them within the grid. Empty slots are preserved, so
+    your visual layout stays exactly as you designed it.
   </p>
 
   <h3>Grid Positions</h3>
   <p>
-    The grid maintains positional integrity - empty slots are preserved so your
-    visual layout stays consistent. This is important for:
+    The grid maintains positional integrity — empty slots are real positions, not
+    gaps to be collapsed. This matters for:
   </p>
 
   <ul>
-    <li>Grouping related colors together</li>
-    <li>Creating visual hierarchies</li>
-    <li>Maintaining consistent spacing</li>
+    <li>Grouping related colors visually</li>
+    <li>Creating light-to-dark gradient layouts</li>
+    <li>Leaving intentional gaps as visual separators</li>
   </ul>
 
   <h2>Palette Settings</h2>
 
-  <h3>Rename Palette</h3>
+  <h3>Rename a Palette</h3>
   <ol>
     <li>Click the palette name at the top</li>
     <li>Type a new name</li>
     <li>Press Enter to save</li>
   </ol>
 
-  <h3>Delete Palette</h3>
+  <h3>Delete a Palette</h3>
   <ol>
     <li>Open the palette menu (⋮)</li>
     <li>Select <strong>Delete Palette</strong></li>
@@ -127,44 +143,43 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
   <h2>Multiple Palettes</h2>
 
   <p>
-    You can create unlimited palettes to organize colors by project, client, or purpose:
+    Organize your work with separate palettes for each project, client, or context:
   </p>
 
   <ul>
-    <li><strong>Project-based</strong> - One palette per project</li>
-    <li><strong>Category-based</strong> - Brand colors, UI colors, Print colors</li>
-    <li><strong>Client-based</strong> - One palette per client</li>
-    <li><strong>Purpose-based</strong> - Favorites, Inspiration, In Progress</li>
+    <li><strong>Project-based</strong> — one palette per project</li>
+    <li><strong>Category-based</strong> — Brand Colors, UI Colors, Print Colors</li>
+    <li><strong>Client-based</strong> — one palette per client</li>
+    <li><strong>Purpose-based</strong> — Favorites, Inspiration, In Progress</li>
   </ul>
 
-  <h3>Switching Palettes</h3>
-  <p>
-    Use the palette dropdown at the top of the window to switch between your palettes.
-    The currently active palette is used when you capture colors with the eyedropper.
-  </p>
+  <div class="step-callout">
+    <strong>Tip:</strong> The currently active palette is where eyedropper captures land.
+    Switch to the right palette before picking colors from your screen.
+  </div>
 
   <h2>Best Practices</h2>
 
   <h3>Naming Conventions</h3>
   <ul>
-    <li>Use descriptive names: "Acme Corp Brand" instead of "Palette 1"</li>
+    <li>Be descriptive: "Acme Corp Brand" rather than "Palette 1"</li>
     <li>Include version numbers for iterations: "Website v2"</li>
-    <li>Add dates for time-based projects: "Holiday Campaign 2025"</li>
+    <li>Add dates for time-based work: "Holiday Campaign 2025"</li>
   </ul>
 
   <h3>Organization Tips</h3>
   <ul>
-    <li>Group similar colors together (all blues, all reds, etc.)</li>
-    <li>Put your most-used colors in the top-left corner for easy access</li>
-    <li>Use labels for colors that aren't obviously named</li>
-    <li>Keep palettes focused - create separate palettes instead of one huge palette</li>
+    <li>Group similar colors together — all blues, all neutrals, etc.</li>
+    <li>Put frequently-used colors in the top-left corner for quick access</li>
+    <li>Label any color that isn't obviously named by its hex value</li>
+    <li>Keep palettes focused — create separate palettes rather than one enormous one</li>
   </ul>
 
   <h2>See Also</h2>
 
   <ul>
-    <li><a href="/docs/features/cloud-sync">Cloud Sync</a> - Sync palettes across devices</li>
-    <li><a href="/docs/guides/export-import">Export & Import</a> - Share palettes with others</li>
-    <li><a href="/docs/guides/workflows">Color Workflows</a> - Common palette workflows</li>
+    <li><a href="/docs/getting-started">Quick Start Guide</a> — add your first colors</li>
+    <li><a href="/docs/faq">FAQ</a> — common questions about palettes</li>
+    <li><a href="/releases">Release Notes</a> — new palette features by version</li>
   </ul>
 </DocsLayout>

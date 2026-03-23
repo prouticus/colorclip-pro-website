@@ -1,5 +1,5 @@
 ---
-import TeaserSlideshow from '../TeaserSlideshow.tsx';
+import TeaserGrid from '../TeaserSlideshow.tsx';
 ---
 
 <section class="bg-gradient-hero">
@@ -14,7 +14,7 @@ import TeaserSlideshow from '../TeaserSlideshow.tsx';
           height="64"
           class="rounded-xl shadow-md ring-2 ring-primary-100 flex-shrink-0"
         />
-        <h1 class="font-display font-bold text-gray-900 animate-fade-in text-left">
+        <h1 class="hero-title font-display font-bold text-gray-900 animate-fade-in text-left">
           Colors++ for<br />
           <span class="gradient-text">Creatives and Makers</span>
         </h1>
@@ -26,14 +26,27 @@ import TeaserSlideshow from '../TeaserSlideshow.tsx';
       </p>
     </div>
 
-    <!-- Teaser GIF Slideshow -->
-    <div class="max-w-3xl mx-auto">
-      <TeaserSlideshow client:load />
+    <!-- Teaser GIF Grid -->
+    <div class="max-w-5xl mx-auto">
+      <TeaserGrid client:load />
 
-      <!-- Version Badge (below slideshow) -->
-      <p class="text-sm text-gray-500 text-center mt-4">
+      <!-- Version Badge (below grid) -->
+      <p class="text-sm text-gray-500 text-center mt-6">
         Version 0.10.x • Free &amp; Open Source
       </p>
     </div>
   </div>
 </section>
+
+<style>
+  /* Reduce hero h1 font size by 30% relative to the global text-5xl/text-6xl defaults */
+  .hero-title {
+    font-size: 2.1rem; /* 70% of text-5xl (3rem) */
+    line-height: 1.1;
+  }
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 2.625rem; /* 70% of text-6xl (3.75rem) */
+    }
+  }
+</style>

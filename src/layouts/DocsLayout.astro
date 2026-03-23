@@ -396,6 +396,41 @@ const currentPath = Astro.url.pathname;
     background: var(--gray-50);
   }
 
+  /* Screenshot images in docs */
+  .docs-content :global(.doc-screenshot) {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    margin: 1.5rem 0;
+  }
+
+  .docs-content :global(.doc-screenshot-caption) {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .docs-content :global(.step-callout) {
+    background: var(--primary-50);
+    border: 1px solid var(--primary-100);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+  }
+
+  .docs-content :global(.step-callout strong) {
+    color: var(--primary-700);
+  }
+
   /* Mobile responsive */
   @media (max-width: 1024px) {
     .docs-container {
