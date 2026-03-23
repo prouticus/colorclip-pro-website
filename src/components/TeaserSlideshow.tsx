@@ -16,12 +16,12 @@ const gifs = [
 
 export default function TeaserGrid() {
   return (
-    <div className="flex flex-wrap gap-4 justify-center">
+    <div className="grid grid-cols-2 gap-4">
       {gifs.map((gif) => (
         <div
           key={gif.file}
           className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-md"
-          style={{ width: '640px', height: '360px', flexShrink: 0 }}
+          style={{ height: '360px' }}
         >
           <img
             src={`/teaser_videos/${gif.file}`}
