@@ -1,5 +1,6 @@
 ---
 import DocsLayout from '../../layouts/DocsLayout.astro';
+import InstallSize from '../../components/InstallSize.tsx';
 ---
 
 <DocsLayout
@@ -18,14 +19,17 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <h3>macOS</h3>
   <ul>
     <li>macOS 10.15 (Catalina) or later</li>
-    <li>Intel (x64) or Apple Silicon (M1/M2/M3)</li>
-    <li>50 MB disk space</li>
+    <li>Intel (x64) or Apple Silicon (M1/M2/M3/M4/M5)</li>
+    <li>
+      Disk space: Apple Silicon <InstallSize platform="macSilicon" fallback="~50 MB" client:load /> /
+      Intel <InstallSize platform="macIntel" fallback="~50 MB" client:load />
+    </li>
   </ul>
 
   <h3>Windows</h3>
   <ul>
     <li>Windows 10 or later (64-bit)</li>
-    <li>50 MB disk space</li>
+    <li>Disk space: <InstallSize platform="windows" fallback="~50 MB" client:load /></li>
   </ul>
 
   <h2>macOS Installation</h2>
