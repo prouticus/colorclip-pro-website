@@ -335,6 +335,17 @@ const currentPath = Astro.url.pathname;
     font-weight: 500;
   }
 
+  .docs-content :global(.quick-start-box h3 a) {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-400);
+    text-underline-offset: 3px;
+  }
+
+  .docs-content :global(.quick-start-box h3 a:hover) {
+    text-decoration-color: var(--primary-700);
+  }
+
   .docs-content :global(.quick-start-box li:before) {
     content: counter(item) ". ";
     color: var(--primary-600);
