@@ -109,19 +109,19 @@ export default function DownloadButtons({ variant = 'default' }: DownloadButtons
         )}
 
         {/* Windows Download */}
-        {links.windows && (
-          <a
-            href={links.windows}
-            className={buttonClass}
-            download
-            aria-label="Download for Windows"
-          >
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M0,12.4l9.6,1.3V24l-9.6-1.3V12.4z M10.7,12.6l12.8,1.7v10.3l-12.8-1.7V12.6z M0,11.1l9.6-1.3V0.4L0,1.7V11.1z M10.7,9.8l12.8-1.7V-2.2l-12.8,1.7V9.8z"/>
-            </svg>
-            Windows (x64)
-          </a>
-        )}
+        <a
+          href={links.windows || 'https://github.com/prouticus/colorclip-pro/releases'}
+          className={buttonClass}
+          download={!!links.windows}
+          target={links.windows ? undefined : '_blank'}
+          rel={links.windows ? undefined : 'noopener noreferrer'}
+          aria-label="Download for Windows"
+        >
+          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 12V6.75l6-1.32v6.57H3zm17-9v8.75h-7V3.91L20 3zM3 13.25H9v6.72l-6-1.06v-5.66zm17 .75h-7v8.09l7-1.23V14z"/>
+          </svg>
+          Windows (x64)
+        </a>
       </div>
 
       {/* Version info - only show on default variant */}
