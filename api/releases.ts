@@ -42,13 +42,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const releases = await response.json();
 
+    // Filter out draft releases (returned by GitHub API when authenticated)
+    const published = releases.filter((r: { draft: boolean }) => !r.draft);
+
     // Set cache headers
     res.setHeader(
       'Cache-Control',
       `s-maxage=${CACHE_TTL}, stale-while-revalidate`
     );
 
-    return res.status(200).json(releases);
+    return res.status(200).json(published);
   } catch (error) {
     console.error('Failed to fetch releases:', error);
     return res.status(500).json({
