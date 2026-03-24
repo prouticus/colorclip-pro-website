@@ -21,15 +21,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    // Unauthenticated requests to the public GitHub API return only published
+    // releases. Authenticated requests also return drafts, which breaks link
+    // generation when the repo has many draft releases.
     const headers: Record<string, string> = {
       'Accept': 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
     };
-
-    // Add auth token if available (increases rate limit to 5000/hr)
-    if (process.env.GITHUB_TOKEN) {
-      headers['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
-    }
 
     const response = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=10`,
@@ -42,16 +40,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const releases = await response.json();
 
-    // Filter out draft releases (returned by GitHub API when authenticated)
-    const published = releases.filter((r: { draft: boolean }) => !r.draft);
-
     // Set cache headers
     res.setHeader(
       'Cache-Control',
       `s-maxage=${CACHE_TTL}, stale-while-revalidate`
     );
 
-    return res.status(200).json(published);
+    return res.status(200).json(releases);
   } catch (error) {
     console.error('Failed to fetch releases:', error);
     return res.status(500).json({
